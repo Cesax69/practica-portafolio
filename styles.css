@@ -1,47 +1,47 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /* Change favorite color */
-  --hue-color: 250;
-  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  /* Slate & Neon Cyan / Blue Accent */
+  --hue-color: 220;
 
-  /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  /* HSL color mode - Light Theme default */
+  --first-color: hsl(225, 90%, 55%);
+  --first-color-second: hsl(225, 90%, 55%);
+  --first-color-alt: hsl(225, 90%, 45%);
+  --first-color-lighter: hsl(225, 90%, 90%);
+  --title-color: hsl(225, 60%, 15%);
+  --text-color: hsl(225, 15%, 35%);
+  --text-color-light: hsl(225, 10%, 55%);
+  --input-color: hsl(225, 50%, 97%);
+  --body-color: hsl(225, 50%, 99%);
   --container-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --scroll-bar-color: hsl(225, 12%, 90%);
+  --scroll-thumb-color: hsl(225, 12%, 80%);
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Plus Jakarta Sans', sans-serif;
+  --title-font: 'Outfit', sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-  --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
+  --big-font-size: 2.25rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
-  --font-medium: 600;
-  --font-semi-bold: 500;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 
   /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -60,10 +60,10 @@
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.4rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
@@ -72,16 +72,19 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  /* HSL color mode */
-
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  /* Futuristic Tech Dark Palette */
+  --first-color: hsl(190, 100%, 45%); /* Vivid Neon Cyan */
+  --first-color-second: hsl(222, 47%, 11%);
+  --first-color-alt: hsl(200, 100%, 50%);
+  --first-color-lighter: hsl(190, 30%, 15%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(220, 14%, 80%);
+  --text-color-light: hsl(220, 10%, 60%);
+  --input-color: hsl(222, 40%, 15%);
+  --body-color: hsl(222, 47%, 6%);
+  --container-color: hsl(222, 40%, 11%);
+  --scroll-bar-color: hsl(222, 15%, 20%);
+  --scroll-thumb-color: hsl(222, 15%, 30%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -119,8 +122,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  overflow: hidden;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 main {
   overflow: hidden;
@@ -130,6 +132,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--title-font);
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -273,8 +276,24 @@ textarea {
 }
 
 /* Active link */
+.active-link {
+  color: var(--first-color) !important;
+}
+.active-link .nav__icon {
+  color: var(--first-color) !important;
+}
 
 /* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--body-color);
+  backdrop-filter: blur(10px);
+}
+@media screen and (min-width: 768px) {
+  .scroll-header {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  }
+}
 
 /*==================== HOME ====================*/
 .home__conatiner {
@@ -535,23 +554,23 @@ textarea {
 }
 
 .skills__css {
-  width: 80%;
+  width: 90%;
 }
 
 .skills__js {
-  width: 60%;
+  width: 85%;
 }
 
 .skills__react {
-  width: 70%;
+  width: 80%;
 }
 
 .skills__git {
-  width: 50%;
+  width: 85%;
 }
 
 .skills__vscode {
-  width: 70%;
+  width: 75%;
 }
 
 .skills__social {
@@ -814,7 +833,7 @@ textarea {
 }
 
 .project__title {
-  font-synthesis: var(--h2-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-75);
 }
 
@@ -1142,7 +1161,7 @@ textarea {
   }
 
   .about__img {
-    will-change: 350px;
+    width: 350px;
   }
 
   .about__description {
