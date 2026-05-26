@@ -1,24 +1,24 @@
-# 🌟 Portafolio Web Profesional - César
+# Portafolio Web Profesional - César Enrique Garay García
 
-Este proyecto es la entrega correspondiente a la **Práctica 1: Personalización y Publicación Profesional de un Sitio Web con Git y GitHub**. Se trata de un portafolio web premium, dinámico, completamente responsivo y adaptado para perfilar la trayectoria, habilidades y proyectos de **César** como Desarrollador Full Stack.
+Este proyecto es la entrega correspondiente a la **Práctica 1: Personalización y Publicación Profesional de un Sitio Web con Git y GitHub**. Se trata de un portafolio web de diseño premium, dinámico, completamente responsivo y adaptado para perfilar la trayectoria, habilidades, certificaciones y proyectos del alumno como Desarrollador Full Stack.
 
-El sitio ha sido completamente personalizado a partir de una plantilla base, elevando sus estándares estéticos y corrigiendo errores lógicos y sintácticos nativos del código original.
-
----
-
-## 🚀 Características Clave
-
-- 💡 **Selector de Tema Inteligente**: Soporte para Modo Claro y Modo Oscuro premium con persistencia en el navegador (`localStorage`).
-- 🎨 **Estética de Vanguardia**: Paleta de colores *Dark Slate & Neon Cyan* futurista con tipografías sofisticadas de Google Fonts (*Outfit* para títulos y *Plus Jakarta Sans* para lectura).
-- ✨ **Efecto Glassmorphism**: Componentes translúcidos modernos con efectos de desenfoque de fondo (`backdrop-filter`) y sutiles bordes brillantes.
-- 📱 **Diseño 100% Responsivo**: Adaptabilidad completa garantizada para smartphones, tablets y pantallas de escritorio grandes.
-- 🔄 **Efecto de Escritura Dinámica (Typewriter)**: Animación interactiva en la sección de inicio para resaltar roles profesionales.
-- 🎭 **Animaciones AOS (Animate On Scroll)**: Desplazamientos suaves y transiciones estéticas de entrada para todos los componentes.
-- 📍 **Scrollspy Activo**: Resaltado automático y dinámico de la sección actual en la barra de navegación.
+El sitio ha sido completamente personalizado a partir de una plantilla base, elevando sus estándares estéticos con variables modernas de diseño y corrigiendo errores lógicos y sintácticos nativos del código original.
 
 ---
 
-## 🛠️ Tecnologías Empleadas
+## Características Clave
+
+- **Selector de Tema Inteligente**: Soporte para Modo Claro y Modo Oscuro premium con persistencia en el navegador (`localStorage`).
+- **Estética de Vanguardia**: Paleta de colores *Dark Slate & Neon Cyan* futurista con tipografías sofisticadas de Google Fonts (*Outfit* para títulos y *Plus Jakarta Sans* para lectura).
+- **Efecto Glassmorphism**: Componentes translúcidos modernos con efectos de desenfoque de fondo (`backdrop-filter`) y sutiles bordes brillantes.
+- **Diseño 100% Responsivo**: Adaptabilidad completa garantizada para smartphones, tablets y pantallas de escritorio grandes.
+- **Efecto de Escritura Dinámica (Typewriter)**: Animación interactiva en la sección de inicio para resaltar roles profesionales.
+- **Animaciones AOS (Animate On Scroll)**: Desplazamientos suaves y transiciones estéticas de entrada para todos los componentes.
+- **Scrollspy Activo**: Resaltado automático y dinámico de la sección actual en la barra de navegación.
+
+---
+
+## Tecnologías Empleadas
 
 - **HTML5** para la estructura semántica.
 - **CSS3** para los estilos premium, gradientes interactivos y sistema de diseño adaptativo.
@@ -29,7 +29,7 @@ El sitio ha sido completamente personalizado a partir de una plantilla base, ele
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 ├── assets/
@@ -43,7 +43,7 @@ El sitio ha sido completamente personalizado a partir de una plantilla base, ele
 
 ---
 
-## ⚙️ Optimizaciones y Corrección de Bugs Realizadas
+## Optimizaciones y Corrección de Bugs Realizadas
 
 Como parte de una auditoría y refactorización profesional de código, se detectaron y corrigieron los siguientes errores nativos del repositorio base:
 
@@ -65,7 +65,7 @@ Como parte de una auditoría y refactorización profesional de código, se detec
 
 ---
 
-## 💻 Flujo de Trabajo en Git (Comandos Utilizados)
+## Flujo de Trabajo en Git (Comandos Utilizados)
 
 Para llevar a cabo el proyecto bajo los mejores estándares de desarrollo profesional, se utilizó la siguiente secuencia de comandos en consola:
 
@@ -85,15 +85,17 @@ Para llevar a cabo el proyecto bajo los mejores estándares de desarrollo profes
    - `style: actualizar sistema de diseño (Google Fonts, Slate & Neon y Glassmorphism)`
    - `fix: corregir errores de localStorage, tabs y reactivar scrollSpy`
    - `feat: personalizar portafolio en español para el perfil de César`
+   - `feat: integrar proyectos reales de GitHub (Artesanias-Garay, Smart-Home IoT, cegg-api)`
+   - `style: redisenar portafolio con efectos glassmorphic premium, gradientes de texto y glows de fondo`
 
 ---
 
-## 🚀 Instrucciones de Despliegue en GitHub Pages
+## Instrucciones de Despliegue en GitHub Pages
 
-Para publicar tu portafolio en internet completamente gratis a través de **GitHub Pages**, sigue estos sencillos pasos desde tu terminal:
+Para publicar el portafolio en internet sin costo a través de **GitHub Pages**, siga estos pasos desde la terminal:
 
 ### Paso 1: Inicializar y Unificar Cambios en tu Git local
-Fusiona los cambios de la rama de desarrollo `feature/customization` a tu rama principal `main`:
+Fusione los cambios de la rama de desarrollo `feature/customization` a la rama principal `main`:
 ```bash
 # Cambiar a la rama principal
 git checkout main
@@ -103,14 +105,14 @@ git merge feature/customization
 ```
 
 ### Paso 2: Crear un repositorio vacío en tu cuenta de GitHub
-1. Ve a tu cuenta de GitHub y crea un nuevo repositorio llamado `mi-portafolio` (o el nombre que gustes).
-2. **IMPORTANTE**: No lo inicialices con archivos README, .gitignore o licencias (déjalo vacío).
+1. Acceda a su cuenta de GitHub y cree un nuevo repositorio llamado `practica-portafolio`.
+2. **IMPORTANTE**: No lo inicialice con archivos README, .gitignore o licencias (déjelo vacío).
 
 ### Paso 3: Vincular tu repositorio local con el remoto de GitHub
-Copia y ejecuta los siguientes comandos en tu consola (reemplaza `tu-usuario` con tu nombre de usuario real de GitHub):
+Vincule el repositorio remoto y suba los cambios con los siguientes comandos:
 ```bash
 # Vincular el repositorio remoto de GitHub
-git remote add origin https://github.com/tu-usuario/mi-portafolio.git
+git remote add origin https://github.com/Cesax69/practica-portafolio.git
 
 # Renombrar la rama a main si no lo está
 git branch -M main
@@ -120,10 +122,10 @@ git push -u origin main
 ```
 
 ### Paso 4: Activar GitHub Pages
-1. Abre tu repositorio en la página de GitHub.
-2. Dirígete a la pestaña de **Settings** (Configuración) en el menú superior.
-3. En la barra lateral izquierda, haz clic en **Pages**.
-4. En la sección **Build and deployment**, bajo el apartado *Branch*, selecciona la rama `main` y la carpeta `/ (root)`.
-5. Haz clic en **Save** (Guardar).
+1. Abra su repositorio en la página de GitHub.
+2. Diríjase a la pestaña de **Settings** (Configuración) en el menú superior.
+3. En la barra lateral izquierda, haga clic en **Pages**.
+4. En la sección **Build and deployment**, bajo el apartado *Branch*, seleccione la rama `main` y la carpeta `/ (root)`.
+5. Haga clic en **Save** (Guardar).
 
-¡Listo! En un par de minutos GitHub compilará el sitio y te proporcionará un enlace permanente (por ejemplo: `https://tu-usuario.github.io/mi-portafolio/`) para que puedas visualizar tu portafolio premium en vivo.
+En unos minutos, GitHub compilará el sitio y proporcionará un enlace permanente (por ejemplo: `https://Cesax69.github.io/practica-portafolio/`) para visualizar el portafolio premium en vivo.
