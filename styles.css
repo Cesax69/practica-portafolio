@@ -734,6 +734,16 @@ body.dark-theme .services__content {
 .services__button {
   cursor: pointer;
   font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.services__button:hover {
+  color: var(--first-color-alt);
 }
 
 .services__button:hover .button__icon {
@@ -746,7 +756,9 @@ body.dark-theme .services__content {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -754,14 +766,24 @@ body.dark-theme .services__content {
   z-index: var(--z-modal);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .services__modal-content {
   position: relative;
   background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 1.25rem;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .services__modal-content {
+  background-color: hsl(222, 40%, 12%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .services__modal-services {
@@ -770,21 +792,30 @@ body.dark-theme .services__content {
 
 .services__modal-service {
   display: flex;
+  column-gap: 0.75rem;
+  align-items: flex-start;
 }
 
 .services__modal-title {
   font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
   margin-bottom: var(--mb-1-5);
 }
 
 .services__modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 1.75rem;
+  color: var(--text-color-light);
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.services__modal-close:hover {
+  color: var(--first-color);
+  transform: rotate(90deg);
 }
 
 .services__modal-icon {
