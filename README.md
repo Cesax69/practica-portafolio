@@ -5,7 +5,6 @@ Este proyecto es la entrega correspondiente a la **Práctica 1: Personalización
 El sitio ha sido completamente personalizado a partir de una plantilla base, elevando sus estándares estéticos con variables modernas de diseño y corrigiendo errores lógicos y sintácticos nativos del código original.
 
 ---
-
 ## Características Clave
 
 - **Selector de Tema Inteligente**: Soporte para Modo Claro y Modo Oscuro premium con persistencia en el navegador (`localStorage`).
@@ -129,3 +128,8 @@ git push -u origin main
 5. Haga clic en **Save** (Guardar).
 
 En unos minutos, GitHub compilará el sitio y proporcionará un enlace permanente (por ejemplo: `https://Cesax69.github.io/practica-portafolio/`) para visualizar el portafolio premium en vivo.
+
+---
+1. Captura del repositorio clonado
+<img width="960" height="464" alt="image" src="https://github.com/user-attachments/assets/c290f054-bf56-4f80-beae-d949ee70fa08" />
+
