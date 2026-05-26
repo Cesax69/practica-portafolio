@@ -78,13 +78,13 @@ body.dark-theme {
   --first-color-alt: hsl(200, 100%, 50%);
   --first-color-lighter: hsl(190, 30%, 15%);
   --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(220, 14%, 80%);
-  --text-color-light: hsl(220, 10%, 60%);
-  --input-color: hsl(222, 40%, 15%);
-  --body-color: hsl(222, 47%, 6%);
-  --container-color: hsl(222, 40%, 11%);
-  --scroll-bar-color: hsl(222, 15%, 20%);
-  --scroll-thumb-color: hsl(222, 15%, 30%);
+  --text-color: hsl(220, 14%, 85%);
+  --text-color-light: hsl(220, 10%, 65%);
+  --input-color: hsl(222, 40%, 13%);
+  --body-color: hsl(222, 47%, 5%);
+  --container-color: hsl(222, 40%, 10%);
+  --scroll-bar-color: hsl(222, 15%, 15%);
+  --scroll-thumb-color: hsl(190, 100%, 45%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -123,6 +123,16 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(67, 97, 238, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, rgba(67, 97, 238, 0.02) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+body.dark-theme {
+  background-image: 
+    radial-gradient(circle at 5% 15%, rgba(0, 229, 255, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 95% 85%, rgba(26, 115, 232, 0.04) 0%, transparent 40%);
+  background-attachment: fixed;
 }
 main {
   overflow: hidden;
@@ -161,6 +171,11 @@ textarea {
 
 .section__title {
   font-size: var(--h1-font-size);
+  background: linear-gradient(135deg, var(--title-color) 40%, var(--first-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  width: 100%;
 }
 
 .section__subtitle {
@@ -336,6 +351,9 @@ textarea {
 
 .home__title {
   font-size: var(--big-font-size);
+  background: linear-gradient(135deg, var(--title-color) 45%, var(--first-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home__subtitle {
@@ -383,17 +401,20 @@ textarea {
 /*==================== BUTTONS ====================*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background: linear-gradient(135deg, var(--first-color) 0%, var(--first-color-alt) 100%);
   color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 0.75rem;
   font-weight: var(--font-medium);
   outline: none;
   border: none;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.3);
 }
 
 .button__icon {
@@ -403,12 +424,15 @@ textarea {
 }
 
 .button--white {
-  background-color: #fff;
+  background: #fff;
   color: var(--first-color);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .button--white:hover {
-  background-color: #fff;
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 .button--flex {
@@ -641,14 +665,16 @@ textarea {
   height: 13px;
   background-color: var(--first-color);
   border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
 }
 
 .qualification__line {
   display: block;
-  width: 1px;
+  width: 2px;
   height: 100%;
   background-color: var(--first-color);
-  transform: translate(6px, -7px);
+  transform: translate(5px, -7px);
+  opacity: 0.4;
 }
 
 .qualification [data-content] {
@@ -672,14 +698,24 @@ textarea {
 .services__content {
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
+  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body.dark-theme .services__content {
+  background: rgba(18, 25, 41, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .services__content:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.12);
+  border-color: var(--first-color);
 }
 
 .services__icon {
@@ -773,8 +809,15 @@ textarea {
 
 .portfolio__img {
   width: 265px;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   justify-self: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.portfolio__img:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 229, 255, 0.15);
 }
 
 .portfolio__title {
@@ -992,17 +1035,17 @@ textarea {
 
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
+  width: 8px;
   background-color: var(--scroll-bar-color);
-  border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
-  border-radius: 0.5rem;
+  background-color: var(--first-color);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-color-light);
+  background-color: var(--first-color-alt);
 }
 
 /*==================== MEDIA QUERIES ====================*/
@@ -1291,4 +1334,52 @@ textarea {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/*==================== CERTIFICATIONS ====================*/
+.certifications__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.certification__card {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 2.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body.dark-theme .certification__card {
+  background: rgba(18, 25, 41, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.certification__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.12);
+  border-color: var(--first-color);
+}
+
+.certification__icon {
+  font-size: 2.5rem;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.certification__card:hover .certification__icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.certification__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-medium);
 }
