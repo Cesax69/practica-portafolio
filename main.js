@@ -48,16 +48,16 @@ const educationBtn = document.getElementById('education-btn'),
   workDiv = document.getElementById('work');
 
 educationBtn.addEventListener('click', function showEducations() {
-  educationBtn.style.color = '#6e57e0';
-  workBtn.style.color = '#6d6a7c';
-  educationDiv.className = 'ualification__content qualification__active';
+  educationBtn.style.color = 'var(--first-color)';
+  workBtn.style.color = 'var(--text-color-light)';
+  educationDiv.className = 'qualification__content qualification__active';
   workDiv.className = 'qualification__content';
 });
 
 workBtn.addEventListener('click', function showWorks() {
-  workBtn.style.color = '#6e57e0';
-  educationBtn.style.color = '#6d6a7c';
-  workDiv.className = 'ualification__content qualification__active';
+  workBtn.style.color = 'var(--first-color)';
+  educationBtn.style.color = 'var(--text-color-light)';
+  workDiv.className = 'qualification__content qualification__active';
   educationDiv.className = 'qualification__content';
 });
 
@@ -102,26 +102,35 @@ var swiper = new Swiper('.portfolio__container', {
 /*==================== TESTIMONIAL ====================*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-// const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll('section[id]')
 
-// function scrollActive() {
-//   const scrollY = window.pageYOffset;
+function scrollActive() {
+  const scrollY = window.pageYOffset || window.scrollY
 
-//   sections.forEach((current) => {
-//     const sectionHeight = current.offsetHeight;
-//     const sectionTop = current.offsetTop - 50;
-//     const sectionId = current.getAttribute("id");
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 58
+    const sectionId = current.getAttribute('id')
+    const navLinkItem = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-//     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//       document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.add('.active-link');
-//     }else{
-//       document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.remove('.active-link')
-//     }
-//   });
-// }
+    if (navLinkItem) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinkItem.classList.add('active-link')
+      } else {
+        navLinkItem.classList.remove('active-link')
+      }
+    }
+  })
+}
 
-// window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive)
 /*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+  const nav = document.getElementById('header')
+  if (this.scrollY >= 80) nav.classList.add('scroll-header');
+  else nav.classList.remove('scroll-header');
+}
+window.addEventListener('scroll', scrollHeader)
 
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp() {
@@ -163,7 +172,7 @@ themeButton.addEventListener('click', () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
   // we save the theme and the current icon that the user chose
-  localStorage.setItem('selected-themee', getCurrentTheme());
+  localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
 });
 
