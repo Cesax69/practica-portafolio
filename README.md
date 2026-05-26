@@ -130,6 +130,5 @@ git push -u origin main
 En unos minutos, GitHub compilará el sitio y proporcionará un enlace permanente (por ejemplo: `https://Cesax69.github.io/practica-portafolio/`) para visualizar el portafolio premium en vivo.
 
 ---
-1. Captura del repositorio clonado
 <img width="960" height="464" alt="image" src="https://github.com/user-attachments/assets/c290f054-bf56-4f80-beae-d949ee70fa08" />
 
